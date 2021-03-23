@@ -1,0 +1,143 @@
+<!-- purple, red, orange, beige -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../public/stylesheets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com"> 
+  <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/ukd1lnj.css">
+  <title>The Empathy Project | Home</title>
+</head>
+<body id="index-body">
+  <header>
+    <nav>
+      <a id="logo" href="index.html"><img src="../public/images/empathy project logo-01.png" alt="The Empathy Project" width="100px" height="100px"></a>
+      <button class="hamburger" id="hamburger">
+        <i class="fas fa-bars fa-3x"></i>
+      </button>
+      <svg id="nav-blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#FFFFFF" d="M50.2,-61.1C63.6,-48.7,71.8,-31.4,70.2,-16C68.6,-0.6,57.3,12.9,49.3,30.1C41.4,47.3,36.9,68.2,25.3,74.6C13.7,81,-5,73,-17.7,62.4C-30.5,51.9,-37.3,38.7,-40.5,26.6C-43.7,14.5,-43.3,3.5,-44.1,-10.5C-44.9,-24.5,-47,-41.5,-39.9,-55C-32.7,-68.5,-16.4,-78.4,1,-79.7C18.5,-80.9,36.9,-73.4,50.2,-61.1Z" transform="translate(100 100)" />
+      </svg>
+      <ul id="nav-ul">
+        <li><a href="info.htm">More Info</a></li>
+        <li><a href="about.htm">About</a></li>
+        <li><a href="scan.htm">Scan</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <!-- buttons -->
+    <div id="buttons" class="buttons">
+      <!-- <button id="q1" onclick="fetchAnswers()"><h1>1</h1></button> -->
+      <button id="q1" onclick="getForm('form-1')"><h1>1</h1></button>
+      <button id="q2" onclick="getForm('form-2')"><h1>2</h1></button>
+      <button id="q3" onclick="getForm('form-3')"><h1>3</h1></button>
+      <button id="q4" onclick="getForm('form-4')"><h1>4</h1></button>
+      <button id="q5" onclick="getForm('form-5')"><h1>5</h1></button>
+      <button id="q6" onclick="getForm('form-6')"><h1>6</h1></button>
+    </div>
+
+    <!-- forms -->
+    <div class="forms">
+      <!-- q1 -->
+      <div id="form-1" class="hide">
+        <h1>What do you want people to care about?</h1>
+        <svg id="form-blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#FFFFFF" d="M61.9,-50.1C72.9,-35.6,69.4,-10.2,62.1,11.2C54.8,32.6,43.7,50.1,28,57.3C12.3,64.5,-7.9,61.4,-27.7,53.4C-47.6,45.4,-67,32.6,-74.2,13.4C-81.4,-5.7,-76.2,-31.1,-61.7,-46.5C-47.3,-61.8,-23.7,-66.9,0.9,-67.6C25.4,-68.3,50.9,-64.6,61.9,-50.1Z" transform="translate(100 100)" />
+        </svg>
+        <form>
+          <input id="question" type="hidden" value="q1">
+          <input id="answer" type="text" placeholder="Share your thoughts.">
+          <br>
+          <input type="submit" value="Share">
+        </form>
+        <form id="just-answers" action="../../server/routes/answers" method="GET">
+          <input type="hidden" name="q1">
+          <input type="submit" value="skip to answers">
+        </form>
+      </div>
+
+      <!-- q2 -->
+      <div id="form-2" class="hide">
+        <h1>What song is helping you through lately?</h1>
+        <form>
+          <input id="question" type="hidden" value="q2">
+          <input id="answer" type="text" placeholder="Share your thoughts.">
+          <input type="submit" value="Share">
+        </form>
+        <form action="#q2">
+          <input type="button" value="skip to answers">
+        </form>
+      </div>
+
+      <!-- q3 -->
+      <div id="form-3" class="hide">
+        <h1>What do you hope for?</h1>
+        <form>
+          <input id="question" type="hidden" value="q3">
+          <input id="answer" type="text" placeholder="Share your thoughts.">
+          <input type="submit" value="Share">
+        </form>
+        <form action="#q3">
+          <input type="button" value="skip to answers">
+        </form>
+      </div>
+
+      <!-- q4 -->
+      <div id="form-4" class="hide">
+        <h1>What do you miss?</h1>
+        <form>
+          <input id="question" type="hidden" value="q4">
+          <input id="answer" type="text" placeholder="Share your thoughts.">
+          <input type="submit" value="Share">
+        </form>
+        <form action="#q4">
+          <input type="button" value="skip to answers">
+        </form>
+      </div>
+
+      <!-- q5 -->
+      <div id="form-5" class="hide">
+        <h1>What made you smile today?</h1>
+        <form>
+          <input id="question" type="hidden" value="q5">
+          <input id="answer" type="text" placeholder="Share your thoughts.">
+          <input type="submit" value="Share">
+        </form>
+        <form action="#q5">
+          <input type="button" value="skip to answers">
+        </form>
+      </div>
+
+      <!-- q6 -->
+      <div id="form-6" class="hide">
+        <h1>Who do you appreciate?</h1>
+        <form>
+          <input id="question" type="hidden" value="q6">
+          <input id="answer" type="text" placeholder="Share your thoughts.">
+          <input type="submit" value="Share">
+        </form>
+        <form action="#q6">
+          <input type="button" value="skip to answers">
+        </form>
+      </div>
+    </div>
+
+    <!-- answers -->
+    <div id="submissions">
+      <ul class="ul">
+      </ul>
+    </div>
+
+    <!-- test with horizontal scroll-->
+    
+
+  </main>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="../public/javascripts/main.js"></script>
+</body>
+</html>

@@ -11,6 +11,17 @@ hamburger.addEventListener('click', () => {
 // functions
 function getForm(question) {
   const form = document.getElementById(question);
+  const idList = ['care-body', 'song-body', 'hope-body', 'miss-body', 'smile-body', 'appreciate-body'];
+  let newId;
+
+  if(question == 'form-1') {newId = idList[0]}
+  else if(question == 'form-2') {newId = idList[1]}
+  else if(question == 'form-3') {newId = idList[2]}
+  else if(question == 'form-4') {newId = idList[3]}
+  else if(question == 'form-5') {newId = idList[4]}
+  else {newId = idList[5]}
+
+  document.getElementById('index-body').id = newId;
   form.classList.toggle('hide');
   buttons.classList.toggle('buttons-hide');
 }

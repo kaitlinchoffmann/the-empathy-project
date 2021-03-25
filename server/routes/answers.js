@@ -24,8 +24,12 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
   try {
-    const answer = await Submission.addAnswer(req.body.question, req.body.answer);
-    console.log(answer);
+    let answer;
+    if((req.body.answer) == "skip") {
+      answer = await Submission.getAnswers(req.body.question);
+    } else {
+      answer = await Submission.addAnswer(req.body.question, req.body.answer);
+    }
     res.send(answer);
   } catch (error) {
     res.status(401).send({ message: error.message });

@@ -52,6 +52,7 @@ const appendToDOM = (answers) => {
   answers[0].map(answer => {
       ul.appendChild(createLi(answer));
   });
+  // const form2 = document.querySelector('.forms');
   const form = document.querySelector('.forms');
   form.classList.toggle('hide');
 };
@@ -80,5 +81,6 @@ const formEvent = form.forEach(item => { item.addEventListener('submit', event =
 
     submission  = { answer, question };
     createSubmission(submission);
+    console.log(submission);
   });
 });

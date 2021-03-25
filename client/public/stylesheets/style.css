@@ -33,6 +33,24 @@ main {
   font-size: 1.2em;
 }
 
+.row:nth-child(odd) {
+  margin-top: 300px;
+}
+#answers {
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+/* header {
+  margin: 0;
+  background: 
+  radial-gradient(circle at 86.21% 9.14%, #94a4ff, transparent 99%),radial-gradient(circle at 11.88% 9.99%, #ddd8ce, transparent 99%);
+  background-size: 150% 150%;
+  position: sticky;
+  top: 0;
+  opacity: 1;
+  z-index: 2;
+} */
+
 /* navbar */
 nav {
   display: flex;
@@ -91,7 +109,6 @@ nav ul li {
 a {
   text-decoration: none;
   color: #1F1F1F;
-
 }
 
 /* buttons for home page */
@@ -130,27 +147,57 @@ button:hover {
 }
 
 /* ============ FORMS ============= */
+@media screen and (min-width: 1050px){
+  #form-blob {
+    height: 70vh;
+    bottom: 0;
+  }
+.share-form {
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 700px){
+  #care-body h1 {
+    font-size: 1.6em;
+  }
+}
+
+#care-body .forms input[type=submit]:nth-child(1) {
+  display: block;
+  margin-left: auto;
+  margin-right: 50px;
+  margin-top: 25px;
+}
+
 #form-blob {
   opacity: 30%;
   margin: 0;
   position: absolute;
   top: 50%;
+  margin: auto;
   left: 0;
   right: 0;
   -ms-transform: translateY(-25%);
   transform: translateY(-25%);
   z-index: -1;
-  max-height: 90vh;
+  max-height: 80vh;
 }
 
-.forms form {
+/* .forms form { */
+.share-form {
   max-width: 350px;
   margin: auto;
-
+  position: absolute;
+  top: 55%;
+  left: 0;
+  right: 0;
+  -ms-transform: translateY(-25%);
+  transform: translateY(-25%);
 }
 
 .forms form input {
-  font-size: 0.8em;
+  font-size: 0.9em;
   border: none;
   background-color: transparent;
 }
@@ -159,6 +206,9 @@ button:hover {
   font-family: termina, sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+#form-1 input[type=submit] {
+  font-size: 1em;
 }
 
 .forms input[type=text]::placeholder {
@@ -175,14 +225,20 @@ button:hover {
 .forms input[type=submit] {
   display: block;
   margin-left: auto;
-  margin-top: 40px;
+  margin-right: 50px;
+  margin-top: 35px;
 }
 
-.forms input[type=button] {
+#just-answers input[type=submit] {
   display: block;
   margin: auto;
   margin-top: 100px;
-  font-family: termina, sans-serif;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -ms-transform: translateY(-25%);
+  transform: translateY(-25%);
 }
 
 .forms h1 {
@@ -376,6 +432,12 @@ button:hover {
 	        animation: gradientBG 10s ease infinite;
 }
 
+/* what song is helping you through lately */
+#song-body .forms #just-answers input[type=submit] {
+  font-family: margo, sans-serif;
+  font-size: 1em;
+}
+
 #song-body {
   font-family: margo, sans-serif;
   font-weight: 300;
@@ -401,15 +463,21 @@ button:hover {
 	        animation: gradientBG 10s ease infinite;
 }
 
+/* what made you smile today? */
 #form-5 h1 {
   font-size: 2.1em;
 }
 
+#smile-body .forms #just-answers input[type=submit] {
+  font-family: suburban, sans-serif;
+  font-size: 1.3em;
+}
+
 #smile-body {
   font-family: suburban, sans-serif;
-font-weight: 400;
-font-style: normal;
-background: radial-gradient(circle at 10.3% 4.5%, #ddd8ce, transparent 47%),radial-gradient(circle at 56.37% 94.51%, #ddd8ce, transparent 27%),radial-gradient(circle at 4.75% 88.89%, #d12824, transparent 29%),radial-gradient(circle at 16.09% 43.32%, #F59E44, transparent 100%),radial-gradient(circle at 90.07% 6.09%, #F59E44, transparent 20%),radial-gradient(circle at 73.84% 67.51%, #ddd8ce, transparent 35%),radial-gradient(circle at 91.78% 88.89%, #d12824, transparent 100%),radial-gradient(circle at 84.1% 35.69%, #d12824, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);	
+  font-weight: 400;
+  font-style: normal;
+  background: radial-gradient(circle at 10.3% 4.5%, #ddd8ce, transparent 47%),radial-gradient(circle at 56.37% 94.51%, #ddd8ce, transparent 27%),radial-gradient(circle at 4.75% 88.89%, #d12824, transparent 29%),radial-gradient(circle at 16.09% 43.32%, #F59E44, transparent 100%),radial-gradient(circle at 90.07% 6.09%, #F59E44, transparent 20%),radial-gradient(circle at 73.84% 67.51%, #ddd8ce, transparent 35%),radial-gradient(circle at 91.78% 88.89%, #d12824, transparent 100%),radial-gradient(circle at 84.1% 35.69%, #d12824, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);	
   min-height: 100%;
   margin: 0;
   background-repeat: no-repeat;
@@ -430,6 +498,12 @@ background: radial-gradient(circle at 10.3% 4.5%, #ddd8ce, transparent 47%),radi
 	        animation: gradientBG 10s ease infinite;
 }
 
+/* what do you miss? */
+#miss-body .forms #just-answers input[type=submit] {
+  font-family: 'Averia Serif Libre', cursive;
+  font-size: 1em;
+}
+
 #miss-body {
   background: radial-gradient(circle at 3.54% 66.38%, #ddd8ce, transparent 19%),radial-gradient(circle at 86.74% 86.5%, #65A478, transparent 29%),radial-gradient(circle at 92.49% 4.92%, #65A478, transparent 19%),radial-gradient(circle at 52.85% 3.05%, #ddd8ce, transparent 53%),radial-gradient(circle at 5.21% 4.63%, #F7C66A, transparent 28%),radial-gradient(circle at 3.54% 91.72%, #F7C66A, transparent 40%),radial-gradient(circle at 82.21% 57.38%, #ddd8ce, transparent 100%),radial-gradient(circle at 3.68% 31.55%, #65A478, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);
   min-height: 100%;
@@ -441,6 +515,11 @@ background: radial-gradient(circle at 10.3% 4.5%, #ddd8ce, transparent 47%),radi
 	        animation: gradientBG 10s ease infinite;
 }
 
+/* what do you hope for? */
+#hope-body .forms #just-answers input[type=submit] {
+  font-family: millik;
+  font-size: 1em;
+}
 #hope-body {
   font-family: millik;
   background: radial-gradient(circle at 7.87% 6.33%, #ddd8ce, transparent 29%),radial-gradient(circle at 8.33% 35.44%, #F59E44, transparent 43%),radial-gradient(circle at 92.36% 84.39%, #F59E44, transparent 65%),radial-gradient(circle at 51.85% 87.76%, #ddd8ce, transparent 40%),radial-gradient(circle at 10.42% 81.73%, #D895B4, transparent 100%),radial-gradient(circle at 89.79% 8.4%, #D895B4, transparent 100%),radial-gradient(circle at 43.52% 4.78%, #ddd8ce, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);
@@ -453,8 +532,13 @@ background: radial-gradient(circle at 10.3% 4.5%, #ddd8ce, transparent 47%),radi
 	        animation: gradientBG 10s ease infinite;
 }
 
+/* who do you appreciate? */
+#appreciate-body .forms #just-answers input[type=submit] {
+  font-family: arvo, serif;
+  font-size: 1em;
+}
 #appreciate-body {
-  font-family: arvo,serif;
+  font-family: arvo, serif;
   font-weight: 700;
   font-style: normal;
   background: radial-gradient(circle at 4.75% 30.66%, #ddd8ce, transparent 28%),radial-gradient(circle at 13.15% 5.2%, #2485BC, transparent 34%),radial-gradient(circle at 92.49% 4.92%, #2485BC, transparent 19%),radial-gradient(circle at 58.01% 4.22%, #ddd8ce, transparent 53%),radial-gradient(circle at 88.73% 80.73%, #94A4FF, transparent 100%),radial-gradient(circle at 6.85% 54.15%, #94A4FF, transparent 21%),radial-gradient(circle at 15.91% 91.14%, #ddd8ce, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);
@@ -467,6 +551,8 @@ background: radial-gradient(circle at 10.3% 4.5%, #ddd8ce, transparent 47%),radi
 	        animation: gradientBG 10s ease infinite;
 }
 
+/* What do you want ppl to care about? */
+/* what do you hope for? */
 #care-body {
 	background: radial-gradient(circle at 3.82% 9.14%, #94a4ff, transparent 41%),radial-gradient(circle at 49.58% 57.73%, #ddd8ce, transparent 53%),radial-gradient(circle at 12.78% 85.26%, #d12824, transparent 100%),radial-gradient(circle at 18.54% 58.83%, #ddd8ce, transparent 23%),radial-gradient(circle at 70.83% 8.4%, #d12824, transparent 74%),radial-gradient(circle at 87.08% 81.61%, #94a4ff, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);
 	min-height: 100%;

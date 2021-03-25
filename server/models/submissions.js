@@ -25,19 +25,27 @@ async function getQuestions() {
   return questions;
 }
 
-async function getAnswers(qId) {
-  const answers = await Submission.subs.findById(qId);
-  return answers;
-}
-
-// add answer to question
-async function addAnswer(qId, answer) {
+function getId(qId) {
   if(qId == "q1") { qId = "604fad980521b9920b5043d7"; }
   else if(qId == "q2") { qId = "604fad2e257a1a91e0ef85d9"; }
   else if(qId == "q3") { qId = "604faedb51caa692ae1caa5a"; }
   else if(qId == "q4") { qId = "604fae1f2422859244125928"; }
   else if(qId == "q5") { qId = "604faea3de9bc9928b34616a"; }
   else { qId = "604fae588182f99266705e21"; }
+  return qId;
+}
+async function getAnswers(qId) {
+  qId = getId(qId);
+
+  const question = await Submission.findById(qId);
+  if(question) {
+    return question.subs.answers;
+  } else throw Error("Question not found");
+}
+
+// add answer to question
+async function addAnswer(qId, answer) {
+  qId = getId(qId);
 
   const question = await Submission.findById(qId);
   if(question) {

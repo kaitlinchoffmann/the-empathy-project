@@ -447,24 +447,23 @@ path {
 /* GRADIENTS */
 /* index.html */
 #index-body {
-  background: 
-  radial-gradient(circle at 86.21% 9.14%, #94a4ff, transparent 63%),radial-gradient(circle at 11.88% 9.99%, #ddd8ce, transparent 38%),radial-gradient(circle at 12.92% 47.75%, #d12824, transparent 50%),radial-gradient(circle at 9.76% 87.62%, #f59e44, transparent 100%),radial-gradient(circle at 84.44% 84.04%, #ddd8ce, transparent 47%),radial-gradient(circle at 58.61% 46.04%, #d12824, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);
+  background: linear-gradient(-45deg, #94A4FF, #D12824, #F59E44, #DDD8CE ); 
   min-height: 100%;
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
-	background-size: 150% 150%; 
+	background-size: 400% 400%;
 	-webkit-animation: gradientBG 10s ease infinite;
 	        animation: gradientBG 10s ease infinite; 
 }
 
 #about-body {
-	background:radial-gradient(circle at 2.43% 3.23%, #ddd8ce, transparent 27%),radial-gradient(circle at 4.86% 91.42%, #2485BC, transparent 23%),radial-gradient(circle at 88.4% 6.05%, #2485BC, transparent 37%),radial-gradient(circle at 71.38% 65.82%, #ddd8ce, transparent 56%),radial-gradient(circle at 18.78% 35.3%, #D895B4, transparent 100%),radial-gradient(circle at 96.35% 97.33%, #D895B4, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);
+  background: linear-gradient(-45deg, #2485BC, #D895B4, #DDD8CE  );
 	min-height: 100%;
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
-	background-size: 150% 150%;
+	background-size: 400% 400%;
 	-webkit-animation: gradientBG 10s ease infinite;
 	        animation: gradientBG 10s ease infinite;
 }
@@ -487,23 +486,23 @@ path {
   /* font-family: margo, sans-serif; */
   font-weight: 300;
   font-style: normal;
-	background: radial-gradient(circle at 7.87% 6.33%, #ddd8ce, transparent 29%),radial-gradient(circle at 8.07% 90.58%, #2485BC, transparent 35%),radial-gradient(circle at 87.73% 6.61%, #2485BC, transparent 60%),radial-gradient(circle at 50.72% 86.22%, #ddd8ce, transparent 57%),radial-gradient(circle at 6.85% 44.44%, #D895B4, transparent 100%),radial-gradient(circle at 90.39% 96.77%, #D895B4, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);
+  background: linear-gradient(-45deg, #2485BC, #D895B4, #DDD8CE  );
 	min-height: 100%;
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
-	background-size: 150% 150%;
+	background-size: 400% 400%;
 	-webkit-animation: gradientBG 10s ease infinite;
 	        animation: gradientBG 10s ease infinite;
 }
 
 #info-body {
-	background: radial-gradient(circle at 10.3% 4.5%, #ddd8ce, transparent 47%),radial-gradient(circle at 56.37% 94.51%, #ddd8ce, transparent 27%),radial-gradient(circle at 4.75% 88.89%, #d12824, transparent 29%),radial-gradient(circle at 16.09% 43.32%, #F59E44, transparent 100%),radial-gradient(circle at 95.37% 4.22%, #F59E44, transparent 39%),radial-gradient(circle at 77.66% 50.21%, #ddd8ce, transparent 34%),radial-gradient(circle at 89.12% 90.01%, #d12824, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);
+  background: linear-gradient(-45deg, #D12824, #F59E44, #DDD8CE);
 	min-height: 100%;
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
-	background-size: 150% 150%;
+	background-size: 400% 400%;
 	-webkit-animation: gradientBG 10s ease infinite;
 	        animation: gradientBG 10s ease infinite;
 }
@@ -527,23 +526,12 @@ path {
   /* font-family: suburban, sans-serif; */
   font-weight: 400;
   font-style: normal;
-  background: radial-gradient(circle at 10.3% 4.5%, #ddd8ce, transparent 47%),radial-gradient(circle at 56.37% 94.51%, #ddd8ce, transparent 27%),radial-gradient(circle at 4.75% 88.89%, #d12824, transparent 29%),radial-gradient(circle at 16.09% 43.32%, #F59E44, transparent 100%),radial-gradient(circle at 90.07% 6.09%, #F59E44, transparent 20%),radial-gradient(circle at 73.84% 67.51%, #ddd8ce, transparent 35%),radial-gradient(circle at 91.78% 88.89%, #d12824, transparent 100%),radial-gradient(circle at 84.1% 35.69%, #d12824, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);	
+  background: linear-gradient(-45deg, #D12824, #F59E44, #DDD8CE);
   min-height: 100%;
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
-	background-size: 150% 150%; 
-	-webkit-animation: gradientBG 10s ease infinite;
-	        animation: gradientBG 10s ease infinite;
-}
-
-#scan-body {
-  background: radial-gradient(circle at 3.54% 66.38%, #ddd8ce, transparent 19%),radial-gradient(circle at 12.04% 7.17%, #65A478, transparent 58%),radial-gradient(circle at 5.08% 91.84%, #65A478, transparent 19%),radial-gradient(circle at 50.5% 63.15%, #ddd8ce, transparent 69%),radial-gradient(circle at 92.82% 3.8%, #F7C66A, transparent 28%),radial-gradient(circle at 92.38% 90.44%, #F7C66A, transparent 40%),radial-gradient(circle at 5.08% 39.8%, #ddd8ce, transparent 100%),radial-gradient(circle at 94.25% 60.9%, #65A478, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);
-  min-height: 100%;
-  margin: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-	background-size: 150% 150%;
+	background-size: 400% 400%; 
 	-webkit-animation: gradientBG 10s ease infinite;
 	        animation: gradientBG 10s ease infinite;
 }
@@ -559,12 +547,12 @@ path {
 }
 
 #miss-body {
-  background: radial-gradient(circle at 3.54% 66.38%, #ddd8ce, transparent 19%),radial-gradient(circle at 86.74% 86.5%, #65A478, transparent 29%),radial-gradient(circle at 92.49% 4.92%, #65A478, transparent 19%),radial-gradient(circle at 52.85% 3.05%, #ddd8ce, transparent 53%),radial-gradient(circle at 5.21% 4.63%, #F7C66A, transparent 28%),radial-gradient(circle at 3.54% 91.72%, #F7C66A, transparent 40%),radial-gradient(circle at 82.21% 57.38%, #ddd8ce, transparent 100%),radial-gradient(circle at 3.68% 31.55%, #65A478, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);
+	background: linear-gradient(-45deg, #65A478, #F7C66A, #DDD8CE);
   min-height: 100%;
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
-	background-size: 150% 150%;
+	background-size: 400% 400%;
 	-webkit-animation: gradientBG 10s ease infinite;
 	        animation: gradientBG 10s ease infinite;
 }
@@ -585,12 +573,12 @@ path {
 
 #hope-body {
   /* font-family: millik; */
-  background: radial-gradient(circle at 7.87% 6.33%, #ddd8ce, transparent 29%),radial-gradient(circle at 8.33% 35.44%, #F59E44, transparent 43%),radial-gradient(circle at 92.36% 84.39%, #F59E44, transparent 65%),radial-gradient(circle at 51.85% 87.76%, #ddd8ce, transparent 40%),radial-gradient(circle at 10.42% 81.73%, #D895B4, transparent 100%),radial-gradient(circle at 89.79% 8.4%, #D895B4, transparent 100%),radial-gradient(circle at 43.52% 4.78%, #ddd8ce, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);
+	background: linear-gradient(-45deg, #D895B4, #F59E44, #DDD8CE);
 	min-height: 100%;
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
-	background-size: 150% 150%;
+	background-size: 400% 400%;
 	-webkit-animation: gradientBG 10s ease infinite;
 	        animation: gradientBG 10s ease infinite;
 }
@@ -613,12 +601,12 @@ path {
   /* font-family: arvo, serif; */
   font-weight: 700;
   font-style: normal;
-  background: radial-gradient(circle at 4.75% 30.66%, #ddd8ce, transparent 28%),radial-gradient(circle at 13.15% 5.2%, #2485BC, transparent 34%),radial-gradient(circle at 92.49% 4.92%, #2485BC, transparent 19%),radial-gradient(circle at 58.01% 4.22%, #ddd8ce, transparent 53%),radial-gradient(circle at 88.73% 80.73%, #94A4FF, transparent 100%),radial-gradient(circle at 6.85% 54.15%, #94A4FF, transparent 21%),radial-gradient(circle at 15.91% 91.14%, #ddd8ce, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);
+	background: linear-gradient(-45deg, #94A4FF, #2485BC, #DDD8CE);
   min-height: 100%;
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
-	background-size: 150% 150%;
+	background-size: 400% 400%;
 	-webkit-animation: gradientBG 10s ease infinite;
 	        animation: gradientBG 10s ease infinite;
 }
@@ -630,12 +618,12 @@ path {
 }
 
 #care-body {
-	background: radial-gradient(circle at 3.82% 9.14%, #94a4ff, transparent 41%),radial-gradient(circle at 49.58% 57.73%, #ddd8ce, transparent 53%),radial-gradient(circle at 12.78% 85.26%, #d12824, transparent 100%),radial-gradient(circle at 18.54% 58.83%, #ddd8ce, transparent 23%),radial-gradient(circle at 70.83% 8.4%, #d12824, transparent 74%),radial-gradient(circle at 87.08% 81.61%, #94a4ff, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);
+	background: linear-gradient(-45deg, #D12824, #94A4FF, #DDD8CE);
 	min-height: 100%;
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 150% 150%;
+  background-size: 400% 400%;
 	-webkit-animation: gradientBG 10s ease infinite;
 	        animation: gradientBG 10s ease infinite;
 }

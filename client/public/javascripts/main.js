@@ -38,21 +38,49 @@ const fetchAnswers = () => {
       .catch(error => console.error(error));
 };
 
-// append answers to dom
-const createLi = (answer) => {
-  const li = document.createElement('li');
-  // add user details to `li`
-  li.textContent = `${answer}`;
-  return li;
-};
+const appendToDOM = (answers, question) => {
+  let h1;
+  if(question == "q1") { h1 = "What do you want people to care about?"; }
+  else if(question == "q2") { h1 = "What song is helping you through lately?"; }
+  else if(question == "q3") { h1 = "What do you hope for?"; }
+  else if(question == "q4") { h1 = "What do you miss?"; }
+  else if(question == "q5") { h1 = "What made you smile today?"; }
+  else { h1 = "Who do you appreciate?"; }
 
-const appendToDOM = (answers) => {
-  const ul = document.querySelector('.ul');
-  //iterate over all answers
+  let d = [
+    "M70.1,-15.7C78.4,2.9,64.2,35.8,39.8,53.1C15.5,70.4,-19,72.1,-42.9,55.6C-66.8,39,-80,4.4,-71.1,-15C-62.2,-34.4,-31.1,-38.4,-0.1,-38.4C30.9,-38.4,61.8,-34.2,70.1,-15.7Z",
+    "M58.4,-57.2C73.6,-43.3,82.4,-21.6,82.4,0C82.4,21.7,73.7,43.3,58.5,55.7C43.3,68,21.7,71.1,4.5,66.6C-12.6,62,-25.2,49.9,-39.3,37.5C-53.4,25.2,-69,12.6,-71.5,-2.5C-74,-17.6,-63.4,-35.1,-49.2,-49.1C-35.1,-63.1,-17.6,-73.5,2,-75.5C21.6,-77.5,43.3,-71.2,58.4,-57.2Z",
+    "M63.5,-22.5C70.3,0.4,55.6,28.3,32.1,45.7C8.7,63.2,-23.6,70,-44.4,56.1C-65.2,42.1,-74.5,7.4,-65.2,-18.8C-55.9,-45,-28,-62.8,0.2,-62.9C28.3,-62.9,56.6,-45.3,63.5,-22.5Z",
+    "M61.4,-33.1C75.1,-11.6,78.8,18,66.9,33.2C55,48.5,27.5,49.3,5.9,45.9C-15.6,42.5,-31.3,34.8,-42.8,19.8C-54.3,4.8,-61.7,-17.5,-53.9,-35.6C-46,-53.6,-23,-67.4,0.4,-67.6C23.8,-67.8,47.6,-54.5,61.4,-33.1Z",
+    "M66.6,-34.1C79.5,-16.1,78.5,14.3,65.1,29.7C51.7,45,25.8,45.3,2.4,43.9C-21,42.5,-42.1,39.5,-54.5,24.7C-66.9,9.9,-70.8,-16.6,-60.3,-33.2C-49.7,-49.8,-24.9,-56.5,1,-57C26.8,-57.6,53.7,-52,66.6,-34.1Z",
+    "M55.8,-23.4C67.4,-12.3,68.2,13.8,57.1,31.6C46.1,49.4,23,58.8,1.2,58.1C-20.6,57.4,-41.1,46.5,-46.8,31.9C-52.5,17.2,-43.2,-1.2,-32.9,-11.6C-22.7,-22,-11.3,-24.4,5.4,-27.5C22.2,-30.6,44.3,-34.5,55.8,-23.4Z",
+    "M48.3,-21.8C62.2,-3.8,72.8,22.2,64.2,38C55.6,53.8,27.8,59.5,5.7,56.2C-16.4,52.9,-32.7,40.6,-45.2,22.5C-57.8,4.5,-66.4,-19.4,-58.2,-34.2C-50,-48.9,-25,-54.4,-3.9,-52.2C17.2,-49.9,34.4,-39.9,48.3,-21.8Z",
+    "M57.6,-31.8C68.3,-14.7,66.3,11.2,54.6,28.1C42.9,45,21.4,52.9,-1.9,54C-25.3,55.1,-50.6,49.5,-55.7,36.4C-60.7,23.4,-45.5,2.9,-32.9,-15.3C-20.2,-33.5,-10.1,-49.6,6.7,-53.4C23.4,-57.2,46.9,-48.9,57.6,-31.8Z"
+  ];
+
+  let header = $('main');
+  let subs = $('.blob-sub');
+
+  header.prepend(
+    '<h1>' + h1 + '</h1>'
+  );
+
   answers[0].map(answer => {
-      ul.appendChild(createLi(answer));
+    let r = Math.floor(Math.random() * Math.floor(8));
+    console.log(r);
+    subs.last().append(
+      '<div class="svg-content">' +
+      '<div class="shape1 flip">' +
+        '<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">' +
+          '<path fill="#FFFFFF" d='+ d[r] +' transform="translate(100 100)" />' +
+        '</svg>' +
+      '</div>' +
+      '<div class="blob-content">' +
+        '<p>'+ answer +'</p>' +
+      '</div>' +
+    '</div>'
+    );
   });
-  // const form2 = document.querySelector('.forms');
   const form = document.querySelector('.forms');
   form.classList.toggle('hide');
 };
@@ -62,9 +90,8 @@ const createSubmission = (answer) => {
   axios.post('http://localhost:5000/answers', answer)
       .then(response => {
           const addedSubmission = response.data;
-          console.log(`POST: submission is added`, addedSubmission);
           // append to DOM
-          appendToDOM([addedSubmission]);
+          appendToDOM([addedSubmission], answer.question);
       })
       .catch(error => console.error(error));
 };
@@ -81,6 +108,5 @@ const formEvent = form.forEach(item => { item.addEventListener('submit', event =
 
     submission  = { answer, question };
     createSubmission(submission);
-    console.log(submission);
   });
 });

@@ -1,4 +1,3 @@
-<!-- purple, red, orange, beige -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,14 +33,29 @@
     <p>
       Launch camera to scan a QR code.
     </p>
-    <button id="access-camera">
+    <!-- <button id="access-camera" onclick="scan()">
       Access Camera
-    </button>
-    <!-- <button id="access-camera">
-      <input type="file" accept="image/*" capture="camera" value="Access Camera">
     </button> -->
 
+    <label id="access-camera">
+      <input type="file" accept="image/*;capture=camera">
+      Access Camera
+    </label>
+
   </main>
+  <script>
+    function scan() {
+      const constraints = {
+        video: true,
+      };
+      
+      const video = document.querySelector("section");
+      
+      navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
+        video.srcObject = stream;
+      });
+    }
+    </script>
 
   <script src="../public/javascripts/main.js"></script>
 </body>

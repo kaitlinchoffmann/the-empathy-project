@@ -35,6 +35,7 @@ nav {
 
 #nav-ul {
  align-self: center;
+ z-index: 1;
 }
 
 #logo {
@@ -416,7 +417,6 @@ path {
     right: 0;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    opacity: 40%;
   }
 }
 

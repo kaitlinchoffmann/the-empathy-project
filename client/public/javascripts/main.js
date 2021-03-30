@@ -8,6 +8,7 @@ hamburger.addEventListener('click', () => {
   navBlog.classList.toggle('show-blob');
 });
 
+
 // functions
 function getForm(question) {
   const form = document.getElementById(question);

@@ -185,7 +185,7 @@ button:hover {
   font-size: 1em;
 }
 
-.forms input[type=text]::placeholder {
+#form-1 input[type=text]::placeholder {
   color: #94A4FF;
 }
 
@@ -475,8 +475,16 @@ path {
   font-size: 1em;
 }
 
-#song-body {
+#song-body input[type=text]::placeholder {
+  color: #2485BC;
+}
+
+#song-body h1 {
   font-family: margo, sans-serif;
+}
+
+#song-body {
+  /* font-family: margo, sans-serif; */
   font-weight: 300;
   font-style: normal;
 	background: radial-gradient(circle at 7.87% 6.33%, #ddd8ce, transparent 29%),radial-gradient(circle at 8.07% 90.58%, #2485BC, transparent 35%),radial-gradient(circle at 87.73% 6.61%, #2485BC, transparent 60%),radial-gradient(circle at 50.72% 86.22%, #ddd8ce, transparent 57%),radial-gradient(circle at 6.85% 44.44%, #D895B4, transparent 100%),radial-gradient(circle at 90.39% 96.77%, #D895B4, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);
@@ -501,8 +509,9 @@ path {
 }
 
 /* what made you smile today? */
-#form-5 h1 {
+#smile-body h1 {
   font-size: 2.1em;
+  font-family: suburban, sans-serif;
 }
 
 #smile-body .forms #just-answers input[type=submit] {
@@ -510,8 +519,12 @@ path {
   font-size: 1.3em;
 }
 
+#smile-body input[type=text]::placeholder {
+  color: #d12824;
+}
+
 #smile-body {
-  font-family: suburban, sans-serif;
+  /* font-family: suburban, sans-serif; */
   font-weight: 400;
   font-style: normal;
   background: radial-gradient(circle at 10.3% 4.5%, #ddd8ce, transparent 47%),radial-gradient(circle at 56.37% 94.51%, #ddd8ce, transparent 27%),radial-gradient(circle at 4.75% 88.89%, #d12824, transparent 29%),radial-gradient(circle at 16.09% 43.32%, #F59E44, transparent 100%),radial-gradient(circle at 90.07% 6.09%, #F59E44, transparent 20%),radial-gradient(circle at 73.84% 67.51%, #ddd8ce, transparent 35%),radial-gradient(circle at 91.78% 88.89%, #d12824, transparent 100%),radial-gradient(circle at 84.1% 35.69%, #d12824, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);	
@@ -541,6 +554,10 @@ path {
   font-size: 1em;
 }
 
+#miss-body input[type=text]::placeholder {
+  color: #65A478;
+}
+
 #miss-body {
   background: radial-gradient(circle at 3.54% 66.38%, #ddd8ce, transparent 19%),radial-gradient(circle at 86.74% 86.5%, #65A478, transparent 29%),radial-gradient(circle at 92.49% 4.92%, #65A478, transparent 19%),radial-gradient(circle at 52.85% 3.05%, #ddd8ce, transparent 53%),radial-gradient(circle at 5.21% 4.63%, #F7C66A, transparent 28%),radial-gradient(circle at 3.54% 91.72%, #F7C66A, transparent 40%),radial-gradient(circle at 82.21% 57.38%, #ddd8ce, transparent 100%),radial-gradient(circle at 3.68% 31.55%, #65A478, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);
   min-height: 100%;
@@ -557,8 +574,17 @@ path {
   font-family: millik;
   font-size: 1em;
 }
-#hope-body {
+
+#hope-body h1 {
   font-family: millik;
+}
+
+#hope-body input[type=text]::placeholder {
+  color: #D895B4;
+}
+
+#hope-body {
+  /* font-family: millik; */
   background: radial-gradient(circle at 7.87% 6.33%, #ddd8ce, transparent 29%),radial-gradient(circle at 8.33% 35.44%, #F59E44, transparent 43%),radial-gradient(circle at 92.36% 84.39%, #F59E44, transparent 65%),radial-gradient(circle at 51.85% 87.76%, #ddd8ce, transparent 40%),radial-gradient(circle at 10.42% 81.73%, #D895B4, transparent 100%),radial-gradient(circle at 89.79% 8.4%, #D895B4, transparent 100%),radial-gradient(circle at 43.52% 4.78%, #ddd8ce, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);
 	min-height: 100%;
   margin: 0;
@@ -574,8 +600,17 @@ path {
   font-family: arvo, serif;
   font-size: 1em;
 }
-#appreciate-body {
+
+#appreciate-body h1 {
   font-family: arvo, serif;
+}
+
+#appreciate-body input[type=text]::placeholder {
+  color: #2485BC;
+}
+
+#appreciate-body {
+  /* font-family: arvo, serif; */
   font-weight: 700;
   font-style: normal;
   background: radial-gradient(circle at 4.75% 30.66%, #ddd8ce, transparent 28%),radial-gradient(circle at 13.15% 5.2%, #2485BC, transparent 34%),radial-gradient(circle at 92.49% 4.92%, #2485BC, transparent 19%),radial-gradient(circle at 58.01% 4.22%, #ddd8ce, transparent 53%),radial-gradient(circle at 88.73% 80.73%, #94A4FF, transparent 100%),radial-gradient(circle at 6.85% 54.15%, #94A4FF, transparent 21%),radial-gradient(circle at 15.91% 91.14%, #ddd8ce, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);
@@ -590,6 +625,10 @@ path {
 
 /* What do you want ppl to care about? */
 /* what do you hope for? */
+#care-body h1 {
+  font-family: termina, sans-serif;
+}
+
 #care-body {
 	background: radial-gradient(circle at 3.82% 9.14%, #94a4ff, transparent 41%),radial-gradient(circle at 49.58% 57.73%, #ddd8ce, transparent 53%),radial-gradient(circle at 12.78% 85.26%, #d12824, transparent 100%),radial-gradient(circle at 18.54% 58.83%, #ddd8ce, transparent 23%),radial-gradient(circle at 70.83% 8.4%, #d12824, transparent 74%),radial-gradient(circle at 87.08% 81.61%, #94a4ff, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);
 	min-height: 100%;

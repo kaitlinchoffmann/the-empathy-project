@@ -12,8 +12,10 @@ body {
 	width: 100%;
 	height: 100vh;
 	color: #1F1F1F;
-  font-family: "Averia Serif Libre", cursive;
+  font-family: 'Karla', sans-serif;
   font-weight: 400;
+  font-style: normal;
+
 }
 
 main {
@@ -33,9 +35,20 @@ nav {
   margin: 1.5em 1.5em 1.5em 2.5em;
 }
 
+.sticky {
+  /* position: sticky; */
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
 #nav-ul {
  align-self: center;
  z-index: 1;
+}
+
+nav path {
+  opacity: 70%;
 }
 
 #logo {
@@ -229,6 +242,10 @@ button:hover {
 }
 
 /* ============ INFO PAGE ============= */
+#info-body {
+  line-height: 1.6;
+}
+
 #info-body h1 {
   font-size: 3em;
   margin-bottom: 0;
@@ -246,10 +263,11 @@ button:hover {
   padding: 18px 45px;
 }
 
-#info-body h3 {
+#info-body .tip-heading {
   margin-bottom: 0;
   margin-top: 30px;
-  color: #D12824;
+  font-weight: 700;
+  /* color: #D12824; */
 }
 
 #info-body p:nth-child(n+3) {
@@ -266,7 +284,11 @@ button:hover {
   list-style: none;
 }
 
-#info-body ul {
+#info-body .link-ul a {
+  text-decoration: underline;
+}
+
+#info-body .link-ul {
   padding-left: 0;
   margin-top: 0;
 }
@@ -330,6 +352,10 @@ path {
 }
 
 /* ============ ABOUT PAGE ============= */
+#about-body {
+  line-height: 1.6;
+}
+
 #about-body h1 {
   font-size: 3em;
   margin-bottom: 0;
@@ -338,6 +364,10 @@ path {
 
 #about-body p, #about-body ul {
   margin-bottom: 30px;
+}
+
+.first {
+  margin-top: 0;
 }
 
 #about-body footer {
@@ -383,6 +413,12 @@ path {
   margin-top: 25vh;
 }
 
+/* Spotify iframe */
+iframe {
+  display: block;
+  margin: auto;
+}
+
 /* media queries */
 @media screen and (max-width: 767px) {
   #nav-ul {
@@ -405,6 +441,7 @@ path {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     font-size: 1.5em;
+
     /* transition: all 1s ease-in-out; */
   }
 

@@ -60,11 +60,19 @@ const appendToDOM = (answers, question) => {
   ];
 
   let header = $('main');
+  let nav = $('nav');
   let subs = $('.blob-sub');
 
-  header.prepend(
+  nav.append(
     '<h1>' + h1 + '</h1>'
   );
+
+  if(question == "q2") {
+    header.append(
+      '<iframe src="https://open.spotify.com/embed/playlist/54cUSkHbKcdUB4tGD6Biyp" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>'
+
+    )
+  }
 
   answers[0].map(answer => {
     let r = Math.floor(Math.random() * Math.floor(8));

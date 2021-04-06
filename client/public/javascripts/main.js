@@ -122,3 +122,15 @@ const formEvent = form.forEach(item => { item.addEventListener('submit', event =
     createSubmission(submission);
   });
 });
+
+const formEvent2 = form.forEach(item => { item.addEventListener('touchstart', event => {
+  // event.preventDefault();
+  console.log(item);
+
+  const answer = item.querySelector('#answer').value;
+  const question = item.querySelector('#question').value;
+
+  submission  = { answer, question };
+  createSubmission(submission);
+});
+});

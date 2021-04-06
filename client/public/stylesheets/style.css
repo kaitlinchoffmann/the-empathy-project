@@ -136,10 +136,10 @@ button h1 {
 
 #buttons svg {
   position: absolute;
-  width: 40%;
+  width: 55%;
   margin: 0;
   opacity: 50%;
-  max-width: 200px;
+  max-width: 250px;
 }
 
 .first-section {
@@ -204,6 +204,12 @@ button:hover {
   }
 }
 
+@media screen and (max-width: 450px){
+  #buttons svg {
+    max-width: 180px;
+  }
+}
+
 #care-body .forms input[type=submit]:nth-child(1) {
   display: block;
   margin-left: auto;
@@ -239,6 +245,8 @@ button:hover {
   font-size: 0.9em;
   border: none;
   background-color: transparent;
+  cursor: pointer;
+  z-index: 99;
 }
 
 #form-1 {

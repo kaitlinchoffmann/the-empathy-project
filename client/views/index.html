@@ -14,8 +14,8 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <title>The Empathy Project | Home</title>
 </head>
-<body id="index-body">
-  <header class="sticky">
+<body id="index-body" class="index">
+  <header>
     <nav>
       <a id="logo" href="index.html"><img src="../public/images/empathy project logo-01.png" alt="The Empathy Project" width="100px" height="100px"></a>
       <button class="hamburger" id="hamburger">
@@ -35,13 +35,55 @@
   <main>
     <!-- buttons -->
     <div id="buttons" class="buttons">
-      <!-- <button id="q1" onclick="fetchAnswers()"><h1>1</h1></button> -->
-      <button id="q1" onclick="getForm('form-1')"><h1>1</h1></button>
-      <button id="q2" onclick="getForm('form-2')"><h1>2</h1></button>
-      <button id="q3" onclick="getForm('form-3')"><h1>3</h1></button>
-      <button id="q4" onclick="getForm('form-4')"><h1>4</h1></button>
-      <button id="q5" onclick="getForm('form-5')"><h1>5</h1></button>
-      <button id="q6" onclick="getForm('form-6')"><h1>6</h1></button>
+      <div class="first-section">
+        <!-- <p style="visibility: hidden;">lorem ipsum</p> -->
+        <p>explore:</p>
+        <button id="q2" onclick="getForm('form-2')">
+          <svg id="home-blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FFFFFF" d="M45.9,-53.8C59.9,-42.9,72.1,-28.9,78.5,-11.1C84.9,6.6,85.5,28.2,75.5,42C65.6,55.8,45.2,62,25.4,68.8C5.6,75.5,-13.7,83,-31.7,79.6C-49.7,76.3,-66.4,62.2,-75.3,44.6C-84.1,27,-85.1,5.9,-81,-13.8C-77,-33.5,-68,-51.9,-53.7,-62.9C-39.3,-73.8,-19.7,-77.2,-1.9,-75C15.9,-72.7,31.8,-64.8,45.9,-53.8Z" transform="translate(100 100)" />
+          </svg>
+          <img src="../public/images/Symbols/song symbol.png" alt="care">
+        </button>
+        <button id="q3" onclick="getForm('form-3')">
+          <svg id="home-blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FFFFFF" d="M45.9,-53.8C59.9,-42.9,72.1,-28.9,78.5,-11.1C84.9,6.6,85.5,28.2,75.5,42C65.6,55.8,45.2,62,25.4,68.8C5.6,75.5,-13.7,83,-31.7,79.6C-49.7,76.3,-66.4,62.2,-75.3,44.6C-84.1,27,-85.1,5.9,-81,-13.8C-77,-33.5,-68,-51.9,-53.7,-62.9C-39.3,-73.8,-19.7,-77.2,-1.9,-75C15.9,-72.7,31.8,-64.8,45.9,-53.8Z" transform="translate(100 100)" />
+          </svg>
+          <img src="../public/images/Symbols/hope symbol.png" alt="care">
+        </button>
+        <button id="q5" onclick="getForm('form-5')">
+          <svg id="home-blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FFFFFF" d="M45.9,-53.8C59.9,-42.9,72.1,-28.9,78.5,-11.1C84.9,6.6,85.5,28.2,75.5,42C65.6,55.8,45.2,62,25.4,68.8C5.6,75.5,-13.7,83,-31.7,79.6C-49.7,76.3,-66.4,62.2,-75.3,44.6C-84.1,27,-85.1,5.9,-81,-13.8C-77,-33.5,-68,-51.9,-53.7,-62.9C-39.3,-73.8,-19.7,-77.2,-1.9,-75C15.9,-72.7,31.8,-64.8,45.9,-53.8Z" transform="translate(100 100)" />
+          </svg>
+          <img src="../public/images/Symbols/smile symbol.png" alt="care">
+        </button>
+      </div>
+
+      <div class="second-section">
+        <button id="q1" style="margin-top: -100px;" onclick="getForm('form-1')">
+          <svg id="home-blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FFFFFF" d="M45.9,-53.8C59.9,-42.9,72.1,-28.9,78.5,-11.1C84.9,6.6,85.5,28.2,75.5,42C65.6,55.8,45.2,62,25.4,68.8C5.6,75.5,-13.7,83,-31.7,79.6C-49.7,76.3,-66.4,62.2,-75.3,44.6C-84.1,27,-85.1,5.9,-81,-13.8C-77,-33.5,-68,-51.9,-53.7,-62.9C-39.3,-73.8,-19.7,-77.2,-1.9,-75C15.9,-72.7,31.8,-64.8,45.9,-53.8Z" transform="translate(100 100)" />
+          </svg>
+          <img src="../public/images/Symbols/care symbol.png" alt="care">
+        </button>
+        <button id="q6" onclick="getForm('form-6')">
+          <svg id="home-blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FFFFFF" d="M45.9,-53.8C59.9,-42.9,72.1,-28.9,78.5,-11.1C84.9,6.6,85.5,28.2,75.5,42C65.6,55.8,45.2,62,25.4,68.8C5.6,75.5,-13.7,83,-31.7,79.6C-49.7,76.3,-66.4,62.2,-75.3,44.6C-84.1,27,-85.1,5.9,-81,-13.8C-77,-33.5,-68,-51.9,-53.7,-62.9C-39.3,-73.8,-19.7,-77.2,-1.9,-75C15.9,-72.7,31.8,-64.8,45.9,-53.8Z" transform="translate(100 100)" />
+          </svg>
+          <img src="../public/images/Symbols/appreciate symbol.png" alt="care">
+        </button>
+        <button id="q4" onclick="getForm('form-4')">
+          <svg id="home-blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FFFFFF" d="M45.9,-53.8C59.9,-42.9,72.1,-28.9,78.5,-11.1C84.9,6.6,85.5,28.2,75.5,42C65.6,55.8,45.2,62,25.4,68.8C5.6,75.5,-13.7,83,-31.7,79.6C-49.7,76.3,-66.4,62.2,-75.3,44.6C-84.1,27,-85.1,5.9,-81,-13.8C-77,-33.5,-68,-51.9,-53.7,-62.9C-39.3,-73.8,-19.7,-77.2,-1.9,-75C15.9,-72.7,31.8,-64.8,45.9,-53.8Z" transform="translate(100 100)" />
+          </svg>
+          <img src="../public/images/Symbols/miss symbol.png" alt="care">
+        </button>
+        <button style="visibility: hidden;">
+          <svg id="home-blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FFFFFF" d="M45.9,-53.8C59.9,-42.9,72.1,-28.9,78.5,-11.1C84.9,6.6,85.5,28.2,75.5,42C65.6,55.8,45.2,62,25.4,68.8C5.6,75.5,-13.7,83,-31.7,79.6C-49.7,76.3,-66.4,62.2,-75.3,44.6C-84.1,27,-85.1,5.9,-81,-13.8C-77,-33.5,-68,-51.9,-53.7,-62.9C-39.3,-73.8,-19.7,-77.2,-1.9,-75C15.9,-72.7,31.8,-64.8,45.9,-53.8Z" transform="translate(100 100)" />
+          </svg>
+          <img src="#" alt="care">
+        </button>
+      </div>
     </div>
 
     <!-- forms -->

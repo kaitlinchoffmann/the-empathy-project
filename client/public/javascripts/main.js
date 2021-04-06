@@ -59,16 +59,19 @@ const appendToDOM = (answers, question) => {
     "M57.6,-31.8C68.3,-14.7,66.3,11.2,54.6,28.1C42.9,45,21.4,52.9,-1.9,54C-25.3,55.1,-50.6,49.5,-55.7,36.4C-60.7,23.4,-45.5,2.9,-32.9,-15.3C-20.2,-33.5,-10.1,-49.6,6.7,-53.4C23.4,-57.2,46.9,-48.9,57.6,-31.8Z"
   ];
 
-  let header = $('main');
+  let main = $('main');
   let nav = $('nav');
   let subs = $('.blob-sub');
+  let header = $('header');
 
   nav.append(
     '<h1>' + h1 + '</h1>'
   );
 
+  // header.toggle('.sticky');
+
   if(question == "q2") {
-    header.append(
+    main.append(
       '<iframe src="https://open.spotify.com/embed/playlist/54cUSkHbKcdUB4tGD6Biyp" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>'
 
     )

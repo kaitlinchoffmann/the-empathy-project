@@ -36,8 +36,9 @@ nav {
 }
 
 .sticky {
-  /* position: sticky; */
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: 1;
 }
@@ -53,6 +54,9 @@ nav path {
 
 #logo {
   z-index: 1;
+  /* content:url("../images/Symbols/appeciate\ logo.png"); */
+  width: 90px;
+  height: 90px;
 }
 
 #nav-blob { 
@@ -100,14 +104,63 @@ a {
 }
 
 /* buttons for home page */
+/* .index main #submissions { */
+  /* margin-top: 45%; */
+/* } */
+
 button h1 {
   font-size: 12rem;
   margin: 0;
 }
 
-.buttons {
+#buttons p {
+  text-align: center;
+  color: white;
+}
+
+#buttons img {
+  /* width: 120px; */
+  width: 100%;
+  max-width: 200px;
+  margin: 0;
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+
+}
+
+#buttons button {
+  /* width: 120px; */
+  width: 100%;
+  margin: 0;
+}
+
+#buttons svg {
+  position: absolute;
+  width: 40%;
+  margin: 0;
+  opacity: 50%;
+  max-width: 200px;
+}
+
+.first-section {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  justify-content: center;
+}
+
+.second-section {
   display: flex;
   flex-direction: column;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  flex-direction: row;
 }
 
 button {
@@ -137,7 +190,7 @@ button:hover {
 /* ============ FORMS ============= */
 @media screen and (min-width: 1050px){
   #form-blob {
-    height: 70vh;
+    max-height: 60vh;
     bottom: 0;
   }
 .share-form {
@@ -166,10 +219,9 @@ button:hover {
   margin: auto;
   left: 0;
   right: 0;
-  -ms-transform: translateY(-25%);
   transform: translateY(-25%);
   z-index: -1;
-  max-height: 80vh;
+  max-height: 60vh;
 }
 
 /* .forms form { */
@@ -180,7 +232,6 @@ button:hover {
   top: 55%;
   left: 0;
   right: 0;
-  -ms-transform: translateY(-25%);
   transform: translateY(-25%);
 }
 
@@ -197,6 +248,22 @@ button:hover {
 }
 #form-1 input[type=submit] {
   font-size: 1em;
+}
+
+#form-1 input[type=text]::-webkit-input-placeholder {
+  color: #94A4FF;
+}
+
+#form-1 input[type=text]::-moz-placeholder {
+  color: #94A4FF;
+}
+
+#form-1 input[type=text]:-ms-input-placeholder {
+  color: #94A4FF;
+}
+
+#form-1 input[type=text]::-ms-input-placeholder {
+  color: #94A4FF;
 }
 
 #form-1 input[type=text]::placeholder {
@@ -225,7 +292,6 @@ button:hover {
   bottom: 0;
   left: 0;
   right: 0;
-  -ms-transform: translateY(-25%);
   transform: translateY(-25%);
 }
 
@@ -325,30 +391,29 @@ path {
 
 .blob-content {
   position: absolute;
+  top: 15%;
+  width: 100px;
+  left: -30%;
+  font-size: 0.7em;
+}
+
+.svg-content:nth-child(even) .blob-content { 
+  position: absolute;
   top: 25%;
   width: 100px;
   /* left: 10%; */
   font-size: 0.7em;
 }
 
-.svg-content:nth-child(even) .blob-content { 
-  position: absolute;
-  top: 35%;
-  width: 100px;
-  /* left: 10%; */
-  font-size: 0.7em;
-}
-
 .shape1.flip {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
   position: relative;
   top: 0;
   width: 200px;
   z-index: 0;
   left: calc(20% - 100px);
+  margin: -35px;
+  margin-top: -30px;
 }
 
 /* ============ ABOUT PAGE ============= */
@@ -438,7 +503,6 @@ iframe {
     top: 50%;
     left: 0;
     right: 0;
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     font-size: 1.5em;
 
@@ -452,7 +516,6 @@ iframe {
     top: 50%;
     left: 0;
     right: 0;
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
 }
@@ -511,6 +574,22 @@ iframe {
   font-size: 1em;
 }
 
+#song-body input[type=text]::-webkit-input-placeholder {
+  color: #2485BC;
+}
+
+#song-body input[type=text]::-moz-placeholder {
+  color: #2485BC;
+}
+
+#song-body input[type=text]:-ms-input-placeholder {
+  color: #2485BC;
+}
+
+#song-body input[type=text]::-ms-input-placeholder {
+  color: #2485BC;
+}
+
 #song-body input[type=text]::placeholder {
   color: #2485BC;
 }
@@ -555,6 +634,22 @@ iframe {
   font-size: 1.3em;
 }
 
+#smile-body input[type=text]::-webkit-input-placeholder {
+  color: #d12824;
+}
+
+#smile-body input[type=text]::-moz-placeholder {
+  color: #d12824;
+}
+
+#smile-body input[type=text]:-ms-input-placeholder {
+  color: #d12824;
+}
+
+#smile-body input[type=text]::-ms-input-placeholder {
+  color: #d12824;
+}
+
 #smile-body input[type=text]::placeholder {
   color: #d12824;
 }
@@ -577,6 +672,22 @@ iframe {
 #miss-body .forms #just-answers input[type=submit] {
   font-family: 'Averia Serif Libre', cursive;
   font-size: 1em;
+}
+
+#miss-body input[type=text]::-webkit-input-placeholder {
+  color: #65A478;
+}
+
+#miss-body input[type=text]::-moz-placeholder {
+  color: #65A478;
+}
+
+#miss-body input[type=text]:-ms-input-placeholder {
+  color: #65A478;
+}
+
+#miss-body input[type=text]::-ms-input-placeholder {
+  color: #65A478;
 }
 
 #miss-body input[type=text]::placeholder {
@@ -604,6 +715,22 @@ iframe {
   font-family: millik;
 }
 
+#hope-body input[type=text]::-webkit-input-placeholder {
+  color: #D895B4;
+}
+
+#hope-body input[type=text]::-moz-placeholder {
+  color: #D895B4;
+}
+
+#hope-body input[type=text]:-ms-input-placeholder {
+  color: #D895B4;
+}
+
+#hope-body input[type=text]::-ms-input-placeholder {
+  color: #D895B4;
+}
+
 #hope-body input[type=text]::placeholder {
   color: #D895B4;
 }
@@ -628,6 +755,22 @@ iframe {
 
 #appreciate-body h1 {
   font-family: arvo, serif;
+}
+
+#appreciate-body input[type=text]::-webkit-input-placeholder {
+  color: #2485BC;
+}
+
+#appreciate-body input[type=text]::-moz-placeholder {
+  color: #2485BC;
+}
+
+#appreciate-body input[type=text]:-ms-input-placeholder {
+  color: #2485BC;
+}
+
+#appreciate-body input[type=text]::-ms-input-placeholder {
+  color: #2485BC;
 }
 
 #appreciate-body input[type=text]::placeholder {

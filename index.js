@@ -8,6 +8,8 @@ const mongoose = require("mongoose");
 const answerRoutes = require("./server/routes/answers");
 const questionRoutes = require("./server/routes/questions");
 
+app.set('trust proxy', true);
+
 mongoose.connect("mongodb://localhost:27017/empathy", { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log("Connection Open!");

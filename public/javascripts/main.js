@@ -82,11 +82,10 @@ const appendToDOM = (answers, question) => {
 
   answers[0].map(answer => {
     let r = Math.floor(Math.random() * Math.floor(8));
-    console.log(r);
     subs.last().append(
       '<div class="svg-content">' +
       '<div class="shape1 flip">' +
-        '<svg viewBox="20 0 200 200" xmlns="http://www.w3.org/2000/svg">' +
+        '<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">' +
           '<path fill="#FFFFFF" d='+ d[r] +' transform="translate(100 100)" />' +
         '</svg>' +
       '</div>' +
@@ -118,7 +117,6 @@ const form = document.querySelectorAll('form');
 
 const formEvent = form.forEach(item => { item.addEventListener('submit', event => {
     event.preventDefault();
-    console.log(item);
 
     const answer = item.querySelector('#answer').value;
     const question = item.querySelector('#question').value;

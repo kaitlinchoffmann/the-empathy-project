@@ -7,12 +7,13 @@ const mongoose = require("mongoose");
 
 const answerRoutes = require("./server/routes/answers");
 const questionRoutes = require("./server/routes/questions");
+const dbUrl = process.env.DB_URL;
 
 app.set('trust proxy', true);
-
-mongoose.connect("mongodb://localhost:27017/empathy", { useNewUrlParser: true, useUnifiedTopology: true })
+// "mongodb://localhost:27017/empathy"
+mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
-    console.log("Connection Open!");
+    console.log("Connection Open!!");
   })
   .catch(err => {
     console.log("error!!!");

@@ -21,17 +21,18 @@ const Submission = mongoose.model("Submission", submissionSchema);
 =========================== */ 
 // get all answers from specific question:
 async function getQuestions() {
-  const questions = await Submission.subs.find();
+  const questions = await Submission.find();
+  // console.log(questions);
   return questions;
 }
 
 function getId(qId) {
-  if(qId == "q1") { qId = "604fad980521b9920b5043d7"; }
-  else if(qId == "q2") { qId = "604fad2e257a1a91e0ef85d9"; }
-  else if(qId == "q3") { qId = "604faedb51caa692ae1caa5a"; }
-  else if(qId == "q4") { qId = "604fae1f2422859244125928"; }
-  else if(qId == "q5") { qId = "604faea3de9bc9928b34616a"; }
-  else { qId = "604fae588182f99266705e21"; }
+  if(qId == "q1") { qId = "60745a3f52a0c82d8eb66dc6"; }
+  else if(qId == "q2") { qId = "60745a649544362db8f1bd24"; }
+  else if(qId == "q3") { qId = "60745a7387b4b82dccae1987"; }
+  else if(qId == "q4") { qId = "60745aac8b4d472e0b0be60c"; }
+  else if(qId == "q5") { qId = "60745a9d6104452df6610df0"; }
+  else { qId = "60745a85f973f32de11c8d6c"; }
   return qId;
 }
 async function getAnswers(qId) {

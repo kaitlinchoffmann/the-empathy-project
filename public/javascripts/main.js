@@ -28,8 +28,8 @@ function getForm(question) {
 }
 
 // calling server
-const api_root = "http://localhost:8080/answers";
-// const api_root = "https://theempathyproject.herokuapp.com/answers"
+// const api_root = "http://localhost:8080/answers";
+const api_root = "https://theempathyproject.herokuapp.com/answers"
 
 const fetchAnswers = () => {
   axios.get(api_root)
@@ -104,7 +104,7 @@ const appendToDOM = (answers, question) => {
 // https://theempathyproject.herokuapp.com/answers
 // create new answer
 const createSubmission = (answer) => {
-  axios.post('http://localhost:8080/answers', answer)
+  axios.post('https://theempathyproject.herokuapp.com/answers', answer)
       .then(response => {
           const addedSubmission = response.data;
           // append to DOM

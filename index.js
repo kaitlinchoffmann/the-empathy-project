@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 
 const answerRoutes = require("./server/routes/answers");
 const questionRoutes = require("./server/routes/questions");
-const dbUrl = process.env.DB_URL;
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/empathy';
 
 app.set('trust proxy', true);
 // "mongodb://localhost:27017/empathy"

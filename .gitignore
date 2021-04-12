@@ -161,4 +161,5 @@ temp/
 # and uncomment the following lines
 # .pnp.*
 
-# End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,dotenv,yarn
+# End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,dotenv,yarnnode_modules/
+node_modules/

@@ -11,7 +11,10 @@ hamburger.addEventListener('click', () => {
 
 // functions
 function getForm(question) {
+  console.log(question);
   const form = document.getElementById(question);
+  const mainForm = document.querySelector('.forms');
+  const section = document.querySelector('#submissions');
   const idList = ['care-body', 'song-body', 'hope-body', 'miss-body', 'smile-body', 'appreciate-body'];
   let newId;
 
@@ -22,9 +25,17 @@ function getForm(question) {
   else if(question == 'form-5') {newId = idList[4]}
   else {newId = idList[5]}
 
-  document.getElementById('index-body').id = newId;
-  form.classList.toggle('hide');
-  buttons.classList.toggle('buttons-hide');
+  if(document.getElementById('index-body')) {
+    document.getElementById('index-body').id = newId;
+    form.classList.toggle('hide');
+    buttons.classList.toggle('buttons-hide');
+  } else {
+    document.querySelector('body').id = newId;
+    form.classList.toggle('hide');
+    mainForm.classList.toggle('hide');
+    section.classList.toggle('hide');
+  }
+  
 }
 
 // calling server
@@ -42,12 +53,37 @@ const fetchAnswers = () => {
 
 const appendToDOM = (answers, question) => {
   let h1;
-  if(question == "q1") { h1 = "What do you want people to care about?"; }
-  else if(question == "q2") { h1 = "What song is helping you through lately?"; }
-  else if(question == "q3") { h1 = "What do you hope for?"; }
-  else if(question == "q4") { h1 = "What do you miss?"; }
-  else if(question == "q5") { h1 = "What made you smile today?"; }
-  else { h1 = "Who do you appreciate?"; }
+  let quest;
+  let questForm;
+  if(question == "q1") { 
+    h1 = "What do you want people to care about?"; 
+    quest = "q2";
+    questForm = "form-2";
+  } else if(question == "q2") { 
+    h1 = "What song is helping you through lately?"; 
+    quest = "q3";
+    questForm = "form-3";
+  }
+  else if(question == "q3") { 
+    h1 = "What do you hope for?"; 
+    quest = "q4";
+    questForm = "form-4";
+  }
+  else if(question == "q4") { 
+    h1 = "What do you miss?"; 
+    quest = "q5";
+    questForm = "form-5";
+  }
+  else if(question == "q5") { 
+    h1 = "What made you smile today?"; 
+    quest = "q6";
+    questForm = "form-6";
+  }
+  else { 
+    h1 = "Who do you appreciate?"; 
+    quest = "q1";
+    questForm = "form-1";
+  }
 
   // M48.3,-21.8C62.2,-3.8,72.8,22.2,64.2,38C55.6,53.8,27.8,59.5,5.7,56.2C-16.4,52.9,-32.7,40.6,-45.2,22.5C-57.8,4.5,-66.4,-19.4,-58.2,-34.2C-50,-48.9,-25,-54.4,-3.9,-52.2C17.2,-49.9,34.4,-39.9,48.3,-21.8Z
   // M55.8,-23.4C67.4,-12.3,68.2,13.8,57.1,31.6C46.1,49.4,23,58.8,1.2,58.1C-20.6,57.4,-41.1,46.5,-46.8,31.9C-52.5,17.2,-43.2,-1.2,-32.9,-11.6C-22.7,-22,-11.3,-24.4,5.4,-27.5C22.2,-30.6,44.3,-34.5,55.8,-23.4Z
@@ -83,7 +119,7 @@ const appendToDOM = (answers, question) => {
   answers[0].map(answer => {
     let r = Math.floor(Math.random() * Math.floor(8));
     subs.last().append(
-      '<div class="svg-content">' +
+      '<div class="svg-content fade-in">' +
       '<div class="shape1 flip">' +
         '<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">' +
           '<path fill="#FFFFFF" d='+ d[r] +' transform="translate(100 100)" />' +
@@ -95,6 +131,9 @@ const appendToDOM = (answers, question) => {
     '</div>'
     );
   });
+  subs.last().append (
+    '<button id="' + quest +'" onclick="getForm(\'' + questForm + '\')">Another Question</button>'
+  );
   const form = document.querySelector('.forms');
   form.classList.toggle('hide');
 };

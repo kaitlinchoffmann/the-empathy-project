@@ -23,6 +23,7 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
+  console.log("HELLLLOOOO THERE!!!!!");
   try {
     let answer;
     if((req.body.answer) == "skip") {

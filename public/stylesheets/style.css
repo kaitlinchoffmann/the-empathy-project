@@ -218,7 +218,7 @@ button:hover {
 }
 
 #form-blob {
-  opacity: 30%;
+  opacity: 80%;
   margin: 0;
   position: absolute;
   top: 50%;
@@ -259,30 +259,36 @@ button:hover {
 }
 
 #form-1 input[type=text]::-webkit-input-placeholder {
-  color: #94A4FF;
+  color: #D12824;
 }
 
 #form-1 input[type=text]::-moz-placeholder {
-  color: #94A4FF;
+  color: #D12824;
 }
 
 #form-1 input[type=text]:-ms-input-placeholder {
-  color: #94A4FF;
+  color: #D12824;
 }
 
 #form-1 input[type=text]::-ms-input-placeholder {
-  color: #94A4FF;
+  color: #D12824;
 }
 
 #form-1 input[type=text]::placeholder {
-  color: #94A4FF;
+  color: #D12824;
 }
 
 .forms input[type=text] {
-  color: #94A4FF;
+  color: #D12824;
   display: block;
   margin: auto;
   margin-top: 100px;
+}
+
+.forms form:first-of-type input[type=submit] {
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 5px 10px;
 }
 
 .forms input[type=submit] {
@@ -400,11 +406,35 @@ path {
 .blob-content {
   position: absolute;
   top: 15%;
-  width: 100px;
-  left: -30%;
+  width: 115px;
+  /* left: -20%; */
   font-size: 0.7em;
+
 }
 
+#care-body .blob-content {
+  color: #D12824;
+}
+
+#song-body .blob-content {
+  color: #2485BC;
+}
+
+#hope-body .blob-content {
+  color: #ac7790;
+}
+
+#appreciate-body .blob-content {
+  color: #246c96;
+}
+
+#smile-body .blob-content {
+  color: #D12824;
+}
+
+#miss-body .blob-content {
+  color: #65A478;
+}
 .svg-content:nth-child(even) .blob-content { 
   position: absolute;
   top: 25%;
@@ -417,7 +447,7 @@ path {
   transform: rotate(180deg);
   position: relative;
   top: 0;
-  width: 200px;
+  width: 250px;
   z-index: 0;
   left: calc(20% - 100px);
   margin: -35px;

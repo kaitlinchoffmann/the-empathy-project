@@ -18,12 +18,30 @@ function getForm(question) {
   const idList = ['care-body', 'song-body', 'hope-body', 'miss-body', 'smile-body', 'appreciate-body'];
   let newId;
 
-  if(question == 'form-1') {newId = idList[0]}
-  else if(question == 'form-2') {newId = idList[1]}
-  else if(question == 'form-3') {newId = idList[2]}
-  else if(question == 'form-4') {newId = idList[3]}
-  else if(question == 'form-5') {newId = idList[4]}
-  else {newId = idList[5]}
+  if(question == 'form-1') {
+    newId = idList[0];
+    $("#logo-img").attr("src","../images/Symbols/care logo.png");
+  }
+  else if(question == 'form-2') {
+    newId = idList[1];
+    $("#logo-img").attr("src","../images/Symbols/song logo.png");
+  }
+  else if(question == 'form-3') {
+    newId = idList[2];
+    $("#logo-img").attr("src","../images/Symbols/hope logo.png");
+  }
+  else if(question == 'form-4') {
+    newId = idList[3];
+    $("#logo-img").attr("src","../images/Symbols/miss logo.png");
+  }
+  else if(question == 'form-5') {
+    newId = idList[4];
+    $("#logo-img").attr("src","../images/Symbols/smile logo.png");
+  }
+  else {
+    newId = idList[5];    
+    $("#logo-img").attr("src","../images/Symbols/appreciate logo.png");
+  }
 
   if(document.getElementById('index-body')) {
     document.getElementById('index-body').id = newId;

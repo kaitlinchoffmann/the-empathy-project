@@ -11,7 +11,6 @@ hamburger.addEventListener('click', () => {
 
 // functions
 function getForm(question) {
-  console.log(question);
   const form = document.getElementById(question);
   const mainForm = document.querySelector('.forms');
   const section = document.querySelector('#submissions');
@@ -54,6 +53,20 @@ function getForm(question) {
     section.classList.toggle('hide');
   }
   
+}
+
+function hideForm() {
+  const forms = document.getElementsByClassName('forms');
+  // const forms = document.querySelectorAll('form');
+  // const forms = mainf.getElementsByClassName('myForm');
+
+  console.log(forms[0].classList);
+  forms.forEach(item => { 
+    console.log(item); 
+    if ($('item').attr('hide') == '')
+      $("item").addClass("hide");
+  
+  });
 }
 
 // calling server
@@ -103,8 +116,6 @@ const appendToDOM = (answers, question) => {
     questForm = "form-1";
   }
 
-  // M48.3,-21.8C62.2,-3.8,72.8,22.2,64.2,38C55.6,53.8,27.8,59.5,5.7,56.2C-16.4,52.9,-32.7,40.6,-45.2,22.5C-57.8,4.5,-66.4,-19.4,-58.2,-34.2C-50,-48.9,-25,-54.4,-3.9,-52.2C17.2,-49.9,34.4,-39.9,48.3,-21.8Z
-  // M55.8,-23.4C67.4,-12.3,68.2,13.8,57.1,31.6C46.1,49.4,23,58.8,1.2,58.1C-20.6,57.4,-41.1,46.5,-46.8,31.9C-52.5,17.2,-43.2,-1.2,-32.9,-11.6C-22.7,-22,-11.3,-24.4,5.4,-27.5C22.2,-30.6,44.3,-34.5,55.8,-23.4Z
   let d = [
     "M70.1,-15.7C78.4,2.9,64.2,35.8,39.8,53.1C15.5,70.4,-19,72.1,-42.9,55.6C-66.8,39,-80,4.4,-71.1,-15C-62.2,-34.4,-31.1,-38.4,-0.1,-38.4C30.9,-38.4,61.8,-34.2,70.1,-15.7Z",
     "M58.4,-57.2C73.6,-43.3,82.4,-21.6,82.4,0C82.4,21.7,73.7,43.3,58.5,55.7C43.3,68,21.7,71.1,4.5,66.6C-12.6,62,-25.2,49.9,-39.3,37.5C-53.4,25.2,-69,12.6,-71.5,-2.5C-74,-17.6,-63.4,-35.1,-49.2,-49.1C-35.1,-63.1,-17.6,-73.5,2,-75.5C21.6,-77.5,43.3,-71.2,58.4,-57.2Z",
@@ -119,10 +130,10 @@ const appendToDOM = (answers, question) => {
   let main = $('main');
   let nav = $('nav');
   let subs = $('.blob-sub');
-  let header = $('header');
 
   nav.append(
-    '<h1>' + h1 + '</h1>'
+    '<h1>' + h1 + '</h1>' +
+    '<br><button id="' + quest +'" onclick="getForm(\'' + questForm + '\')">Another Question</button>'
   );
 
   // header.toggle('.sticky');
@@ -149,11 +160,10 @@ const appendToDOM = (answers, question) => {
     '</div>'
     );
   });
-  subs.last().append (
-    '<button id="' + quest +'" onclick="getForm(\'' + questForm + '\')">Another Question</button>'
-  );
+
   const form = document.querySelector('.forms');
-  form.classList.toggle('hide');
+  // form.classList.toggle('hide');
+  hideForm();
 };
 
 // http://localhost:8080/answers

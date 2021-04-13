@@ -52,21 +52,19 @@ function getForm(question) {
     mainForm.classList.toggle('hide');
     section.classList.toggle('hide');
   }
-  
-}
-
-function hideForm() {
-  const forms = document.getElementsByClassName('forms');
-  // const forms = document.querySelectorAll('form');
-  // const forms = mainf.getElementsByClassName('myForm');
-
-  console.log(forms[0].classList);
-  forms.forEach(item => { 
-    console.log(item); 
-    if ($('item').attr('hide') == '')
-      $("item").addClass("hide");
-  
-  });
+  // make this a function
+  $(".blob-sub").html("");
+  let addedTitle = document.querySelector("nav h1");
+  let addedButton = document.querySelector("nav button.getQuestion");
+  let spotify = document.querySelector("main iframe");
+    console.log(addedButton);
+    if(addedTitle){
+      addedTitle.parentNode.removeChild(addedTitle);
+      addedButton.parentNode.removeChild(addedButton);
+    }
+    if(spotify) {
+      spotify.parentNode.removeChild(spotify);
+    }
 }
 
 // calling server
@@ -83,6 +81,8 @@ const fetchAnswers = () => {
 };
 
 const appendToDOM = (answers, question) => {
+  const section = document.querySelector('#submissions');
+  // make this into an array
   let h1;
   let quest;
   let questForm;
@@ -133,7 +133,7 @@ const appendToDOM = (answers, question) => {
 
   nav.append(
     '<h1>' + h1 + '</h1>' +
-    '<br><button id="' + quest +'" onclick="getForm(\'' + questForm + '\')">Another Question</button>'
+    '<br><button id="' + quest +'" class="getQuestion" onclick="getForm(\'' + questForm + '\')">Another Question</button>'
   );
 
   // header.toggle('.sticky');
@@ -162,8 +162,8 @@ const appendToDOM = (answers, question) => {
   });
 
   const form = document.querySelector('.forms');
-  // form.classList.toggle('hide');
-  hideForm();
+  section.classList.remove('hide');
+  form.classList.toggle('hide');
 };
 
 // http://localhost:8080/answers
@@ -183,12 +183,14 @@ const createSubmission = (answer) => {
 const form = document.querySelectorAll('form');
 
 const formEvent = form.forEach(item => { item.addEventListener('submit', event => {
-    event.preventDefault();
-
+   event.preventDefault();
     const answer = item.querySelector('#answer').value;
     const question = item.querySelector('#question').value;
 
     submission  = { answer, question };
+    item.parentElement.parentElement.classList.toggle('hide');
     createSubmission(submission);
   });
 });
+
+

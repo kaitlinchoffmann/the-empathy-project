@@ -660,6 +660,19 @@ iframe {
 	        animation: gradientBG 10s ease infinite;
 }
 
+/* h1 for all submissions */ 
+nav h1 {
+  font-size: 2em;
+  width: 100%;
+}
+
+.getQuestion {
+  font-size: 1em;
+  border-radius: 30px;
+  border: 1px solid black;
+  padding: 5px 10px;
+}
+
 /* what song is helping you through lately */
 #song-body .forms #just-answers input[type=submit] {
   font-family: margo, sans-serif;
@@ -688,6 +701,8 @@ iframe {
 
 #song-body h1 {
   font-family: margo, sans-serif;
+  font-size: 2em;
+  width: 100%;
 }
 
 #song-body {
@@ -718,6 +733,7 @@ iframe {
 /* what made you smile today? */
 #smile-body h1 {
   font-size: 2.1em;
+  width: 100%;
   font-family: suburban, sans-serif;
 }
 
@@ -766,6 +782,11 @@ iframe {
   font-size: 1em;
 }
 
+#miss-body h1 {
+  font-size: 2em;
+  width: 100%;
+}
+
 #miss-body input[type=text]::-webkit-input-placeholder {
   color: #65A478;
 }
@@ -805,6 +826,8 @@ iframe {
 
 #hope-body h1 {
   font-family: millik;
+  font-size: 2em;
+  width: 100%;
 }
 
 #hope-body input[type=text]::-webkit-input-placeholder {
@@ -847,6 +870,8 @@ iframe {
 
 #appreciate-body h1 {
   font-family: arvo, serif;
+  font-size: 2em;
+  width: 100%;
 }
 
 #appreciate-body input[type=text]::-webkit-input-placeholder {
@@ -887,6 +912,8 @@ iframe {
 /* what do you hope for? */
 #care-body h1 {
   font-family: termina, sans-serif;
+  font-size: 2em;
+  width: 100%;
 }
 
 #care-body {

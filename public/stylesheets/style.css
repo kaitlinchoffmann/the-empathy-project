@@ -3,11 +3,6 @@
   src: url("Margo_Condensed_v0.1-Medium.woff") format('woff');
 }
 
-@font-face {
-  font-family: "millik";
-  src: url("Millik.otf") format('otf');
-}
-
 * {
   box-sizing: border-box;
 }
@@ -753,6 +748,7 @@ nav h1 {
   font-size: 2.1em;
   width: 100%;
   font-family: suburban, sans-serif;
+  font-weight: 300;
 }
 
 #smile-body .forms #just-answers input[type=submit] {
@@ -803,6 +799,7 @@ nav h1 {
 #miss-body h1 {
   font-size: 2em;
   width: 100%;
+  font-weight: 300;
 }
 
 #miss-body input[type=text]::-webkit-input-placeholder {
@@ -838,12 +835,16 @@ nav h1 {
 
 /* what do you hope for? */
 #hope-body .forms #just-answers input[type=submit] {
-  font-family: millik;
+  font-family: 'Changa One', cursive;
+  font-weight: 400;
+  font-style: regular;
   font-size: 1em;
 }
 
 #hope-body h1 {
-  font-family: millik;
+  font-family: 'Changa One', cursive;
+  font-weight: 400;
+  font-style: regular;
   font-size: 2em;
   width: 100%;
 }
@@ -869,7 +870,6 @@ nav h1 {
 }
 
 #hope-body {
-  /* font-family: millik; */
 	background: linear-gradient(-45deg, #D895B4, #F59E44, #DDD8CE);
 	min-height: 100%;
   margin: 0;

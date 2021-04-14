@@ -3,6 +3,11 @@
   src: url("Margo_Condensed_v0.1-Medium.woff") format('woff');
 }
 
+@font-face {
+  font-family: "millik";
+  src: url("Millik.otf") format('otf');
+}
+
 * {
   box-sizing: border-box;
 }

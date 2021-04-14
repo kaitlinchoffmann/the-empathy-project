@@ -57,6 +57,7 @@ function getForm(question) {
   let addedTitle = document.querySelector("nav h1");
   let addedButton = document.querySelector("nav button.getQuestion");
   let spotify = document.querySelector("main iframe");
+  let playButton = document.querySelector("nav a#song-link");
     console.log(addedButton);
     if(addedTitle){
       addedTitle.parentNode.removeChild(addedTitle);
@@ -64,6 +65,7 @@ function getForm(question) {
     }
     if(spotify) {
       spotify.parentNode.removeChild(spotify);
+      playButton.parentNode.removeChild(playButton);
     }
 }
 

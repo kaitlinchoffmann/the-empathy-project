@@ -132,15 +132,18 @@ const appendToDOM = (answers, question) => {
   let subs = $('.blob-sub');
 
   nav.append(
-    '<h1>' + h1 + '</h1>' +
+    '<h1 style="z-index:1;">' + h1 + '</h1>' +
     '<button id="' + quest +'" class="getQuestion" onclick="getForm(\'' + questForm + '\')">Another Question</button>'
   );
 
   // header.toggle('.sticky');
 
   if(question == "q2") {
+    nav.append(
+      '<a id="song-link" href="#music">Play a Song</a>'
+    )
     main.append(
-      '<iframe src="https://open.spotify.com/embed/playlist/54cUSkHbKcdUB4tGD6Biyp" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>'
+      '<iframe id="music" src="https://open.spotify.com/embed/playlist/54cUSkHbKcdUB4tGD6Biyp" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>'
 
     )
   }

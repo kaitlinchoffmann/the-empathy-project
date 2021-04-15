@@ -14,6 +14,7 @@ function getForm(question) {
   const form = document.getElementById(question);
   const mainForm = document.querySelector('.forms');
   const section = document.querySelector('#submissions');
+  const header = document.querySelector('header');
   const idList = ['care-body', 'song-body', 'hope-body', 'miss-body', 'smile-body', 'appreciate-body'];
   let newId;
 
@@ -52,6 +53,7 @@ function getForm(question) {
     mainForm.classList.toggle('hide');
     section.classList.toggle('hide');
   }
+  header.classList.remove('sticky');
   // make this a function
   $(".blob-sub").html("");
   let addedTitle = document.querySelector("nav h1");
@@ -167,8 +169,10 @@ const appendToDOM = (answers, question) => {
   });
 
   const form = document.querySelector('.forms');
+  const header = document.querySelector('header');
   section.classList.remove('hide');
   form.classList.toggle('hide');
+  header.classList.toggle('sticky');
 };
 
 // http://localhost:8080/answers

@@ -646,6 +646,18 @@ iframe {
     font-size: 1.2em !important;
   }
 
+  #form-1 > div > form.share-form > input[type=submit]:nth-child(4) {
+    margin-top: 10px;
+  }
+
+  .forms input[type=submit] {
+    margin-top: 25px;
+  }
+
+  #song-body h1 {
+    font-size: 1.3em !important;
+  }
+
 }
 
 @media screen and (max-width: 370px) {

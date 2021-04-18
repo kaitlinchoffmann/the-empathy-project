@@ -638,6 +638,10 @@ iframe {
     margin-right: 25%;
   }  
 
+  h1 {
+   font-size: 1.4em !important;
+  }
+
   #care-body > header > nav > h1 {
     font-size: 1.3em;
   }
@@ -647,7 +651,7 @@ iframe {
   }
 
   #form-1 > div > form.share-form > input[type=submit]:nth-child(4) {
-    margin-top: 10px;
+    margin-top: 5px;
   }
 
   .forms input[type=submit] {

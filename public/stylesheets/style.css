@@ -202,12 +202,6 @@ button:hover {
   }
 }
 
-@media screen and (max-width: 700px){
-  #care-body h1 {
-    font-size: 1.6em;
-  }
-}
-
 @media screen and (max-width: 450px){
   #buttons svg {
     max-width: 180px;
@@ -637,14 +631,35 @@ iframe {
     /* max-height: 400px; */
   }
   #buttons svg {
-    width: 45%;
-    
-    /* max-width: 250px; */
+    width: 43%;
   }
 
-  
+  .forms form:first-of-type input[type=submit] {
+    margin-right: 25%;
+  }  
+
+  #care-body > header > nav > h1 {
+    font-size: 1.3em;
+  }
 
 }
+
+@media screen and (max-width: 370px) {
+  /* for tiny phones */
+
+  .forms form:first-of-type input[type=submit] {
+    margin-right: auto;
+  } 
+  #buttons svg {
+    width: 50%;
+  }
+
+  h1 {
+    font-size: 1.2em !important;
+    margin-top: 30px !important;
+  }
+}
+
 /* ANIMATIONS */
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }

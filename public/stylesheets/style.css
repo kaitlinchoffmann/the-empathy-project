@@ -582,8 +582,9 @@ iframe {
   }
 
   header.sticky {
+    position: -webkit-sticky;
     position: sticky;
-    /* top: 0; */
+    top: -100px;
     left: 0;
     z-index: 100;
   }
@@ -627,6 +628,22 @@ iframe {
   nav {
     margin: 1em;
   }
+}
+
+@media screen and (max-width: 400px) {
+  /* for small phones */
+  #form-blob {
+    max-height: 50vh;
+    /* max-height: 400px; */
+  }
+  #buttons svg {
+    width: 45%;
+    
+    /* max-width: 250px; */
+  }
+
+  
+
 }
 /* ANIMATIONS */
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }

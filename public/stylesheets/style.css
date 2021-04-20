@@ -33,6 +33,8 @@ main {
   font-size: 1.2em;
 }
 
+
+
 .row:nth-child(odd) {
   margin-top: 300px;
 }
@@ -257,35 +259,16 @@ button:hover {
   font-size: 1em;
 }
 
-#form-1 input[type=text]::-webkit-input-placeholder {
-  color: #D12824;
-}
-
-#form-1 input[type=text]::-moz-placeholder {
-  color: #D12824;
-}
-
-#form-1 input[type=text]:-ms-input-placeholder {
-  color: #D12824;
-}
-
-#form-1 input[type=text]::-ms-input-placeholder {
-  color: #D12824;
-}
-
-#form-1 input[type=text]::placeholder {
-  color: #D12824;
-}
 
 .forms input[type=text] {
-  color: #D12824;
+  /* color: #D12824; */
   display: block;
   margin: auto;
   margin-top: 100px;
 }
 
 .forms form:first-of-type input[type=submit] {
-  border: 1px solid black;
+  border: 1px solid #1F1F1F;
   border-radius: 30px;
   padding: 5px 10px;
 }
@@ -333,7 +316,7 @@ button:hover {
 
 #pdf-button {
   max-width: 235px;
-  border: 6px solid black;
+  border: 6px solid #1F1F1F;
   border-radius: 40px;
   text-align: center;
   display: block;
@@ -383,6 +366,7 @@ button:hover {
   margin-top: 10%;
   padding: 0;
   width: 900px;
+  font-size: 1.3em;
 }
 
 .blob-sub {
@@ -438,34 +422,10 @@ path {
   justify-self: center;
 }
 
-#care-body .blob-content {
-  color: #D12824;
+.blob-content p {
+  max-height: 100px;
+  overflow: scroll;
 }
-
-#song-body .blob-content {
-  color: #2485BC;
-}
-
-#hope-body .blob-content {
-  color: #ac7790;
-}
-
-#appreciate-body .blob-content {
-  color: #246c96;
-}
-
-#smile-body .blob-content {
-  color: #D12824;
-}
-
-#miss-body .blob-content {
-  color: #65A478;
-}
-/* .svg-content:nth-child(even) .blob-content { 
-  position: absolute;
-  width: 100px;
-  font-size: 0.7em;
-} */
 
 .shape1.flip {
   transform: rotate(180deg);
@@ -594,9 +554,6 @@ iframe {
     animation: fadeIn 0.5s linear;
     z-index: 2;
   }
-  /* #nav-ul {
-    z-index: 3;
-  } */
 
 }
 
@@ -628,7 +585,6 @@ iframe {
   /* for small phones */
   #form-blob {
     max-height: 50vh;
-    /* max-height: 400px; */
   }
   #buttons svg {
     width: 43%;
@@ -651,7 +607,7 @@ iframe {
   }
 
   #form-1 > div > form.share-form > input[type=submit]:nth-child(4) {
-    margin-top: 5px;
+    margin-top: 4px;
   }
 
   .forms input[type=submit] {
@@ -748,8 +704,13 @@ nav h1 {
   font-size: 1em;
 }
 
-#song-body input[type=text]::-webkit-input-placeholder {
-  color: #2485BC;
+#song-body input[type=text]::placeholder,
+#care-body input[type=text]::placeholder,
+#hope-body input[type=text]::placeholder,
+#appreciate-body input[type=text]::placeholder,
+#smile-body input[type=text]::placeholder,
+#miss-body input[type=text]::placeholder {
+  color: #1F1F1F;
 }
 
 #song-link {
@@ -758,22 +719,6 @@ nav h1 {
   color:#2485BC;
   padding: 10px 10px 5px 10px;
   z-index: 1;
-}
-
-#song-body input[type=text]::-moz-placeholder {
-  color: #2485BC;
-}
-
-#song-body input[type=text]:-ms-input-placeholder {
-  color: #2485BC;
-}
-
-#song-body input[type=text]::-ms-input-placeholder {
-  color: #2485BC;
-}
-
-#song-body input[type=text]::placeholder {
-  color: #2485BC;
 }
 
 #song-body h1 {
@@ -820,26 +765,6 @@ nav h1 {
   font-size: 1.3em;
 }
 
-#smile-body input[type=text]::-webkit-input-placeholder {
-  color: #d12824;
-}
-
-#smile-body input[type=text]::-moz-placeholder {
-  color: #d12824;
-}
-
-#smile-body input[type=text]:-ms-input-placeholder {
-  color: #d12824;
-}
-
-#smile-body input[type=text]::-ms-input-placeholder {
-  color: #d12824;
-}
-
-#smile-body input[type=text]::placeholder {
-  color: #d12824;
-}
-
 #smile-body {
   /* font-family: suburban, sans-serif; */
   font-weight: 400;
@@ -864,26 +789,6 @@ nav h1 {
   font-size: 2em;
   width: 100%;
   font-weight: 300;
-}
-
-#miss-body input[type=text]::-webkit-input-placeholder {
-  color: #65A478;
-}
-
-#miss-body input[type=text]::-moz-placeholder {
-  color: #65A478;
-}
-
-#miss-body input[type=text]:-ms-input-placeholder {
-  color: #65A478;
-}
-
-#miss-body input[type=text]::-ms-input-placeholder {
-  color: #65A478;
-}
-
-#miss-body input[type=text]::placeholder {
-  color: #65A478;
 }
 
 #miss-body {
@@ -913,26 +818,6 @@ nav h1 {
   width: 100%;
 }
 
-#hope-body input[type=text]::-webkit-input-placeholder {
-  color: #D895B4;
-}
-
-#hope-body input[type=text]::-moz-placeholder {
-  color: #D895B4;
-}
-
-#hope-body input[type=text]:-ms-input-placeholder {
-  color: #D895B4;
-}
-
-#hope-body input[type=text]::-ms-input-placeholder {
-  color: #D895B4;
-}
-
-#hope-body input[type=text]::placeholder {
-  color: #D895B4;
-}
-
 #hope-body {
 	background: linear-gradient(-45deg, #D895B4, #F59E44, #DDD8CE);
 	min-height: 100%;
@@ -954,26 +839,6 @@ nav h1 {
   font-family: arvo, serif;
   font-size: 2em;
   width: 100%;
-}
-
-#appreciate-body input[type=text]::-webkit-input-placeholder {
-  color: #2485BC;
-}
-
-#appreciate-body input[type=text]::-moz-placeholder {
-  color: #2485BC;
-}
-
-#appreciate-body input[type=text]:-ms-input-placeholder {
-  color: #2485BC;
-}
-
-#appreciate-body input[type=text]::-ms-input-placeholder {
-  color: #2485BC;
-}
-
-#appreciate-body input[type=text]::placeholder {
-  color: #2485BC;
 }
 
 #appreciate-body {

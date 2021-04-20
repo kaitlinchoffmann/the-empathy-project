@@ -506,6 +506,14 @@ iframe {
   margin: auto;
 }
 
+
+header.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -100px;
+  left: 0;
+  z-index: 100;
+}
 /* media queries */
 @media screen and (max-width: 767px) {
   .blob-sub {
@@ -535,13 +543,13 @@ iframe {
     z-index: 2;
   }
 
-  header.sticky {
+  /* header.sticky {
     position: -webkit-sticky;
     position: sticky;
     top: -100px;
     left: 0;
     z-index: 100;
-  }
+  } */
   
   #nav-blob.show-blob {
     display: block;

@@ -851,7 +851,7 @@ nav h1 {
 
 #appreciate-body {
   /* font-family: arvo, serif; */
-  font-weight: 700;
+  /* font-weight: 700; */
   font-style: normal;
 	background: linear-gradient(-45deg, #94A4FF, #2485BC, #DDD8CE);
   min-height: 100%;

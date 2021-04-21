@@ -81,7 +81,7 @@ nav path {
   font-size: 2em;
 }
 
-#nav-ul li:nth-child(3), #scan-body h1 {
+#nav-ul li:nth-child(3) {
   font-family: arvo, serif;
   font-weight: 400;
   font-style: normal;
@@ -461,43 +461,6 @@ path {
   margin: 100px 3em;
   padding-bottom: 10px;
   color: #DDD8CE;
-}
-
-/* ============ SCAN PAGE ============= */
-#scan-body h1 {
-  font-size: 3.5em;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-#access-camera {
-  border: 6px solid black;
-  border-radius: 40px;
-  text-align: center;
-  display: block;
-  margin: 35px auto;
-  font-size: 1em;
-  padding: 18px 45px;
-  width: 300px;
-}
-
-#access-camera input[type="file"] {
-  display: none;
-}
-
-#access-camera:hover {
-  cursor: pointer;
-}
-
-#scan-body main p {
-  max-width: 50%;
-  margin: auto;
-}
-#scan-body main {
-  text-align: center;
-  font-size: 1.4em;
-  margin: auto;
-  margin-top: 25vh;
 }
 
 /* Spotify iframe */

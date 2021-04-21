@@ -25,7 +25,7 @@ report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 googlef13058d4307b0b01.html
 
 #sitemap
-sitemap.xml
+# sitemap.xml
 
 # Runtime data
 pids

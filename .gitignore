@@ -21,6 +21,12 @@ app.yaml
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
+#google
+googlef13058d4307b0b01.html
+
+#sitemap
+sitemap.xml
+
 # Runtime data
 pids
 *.pid

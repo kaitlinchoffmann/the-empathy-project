@@ -59,7 +59,6 @@ function getForm(question) {
   let addedButton = document.querySelector("nav button.getQuestion");
   let spotify = document.querySelector("main iframe");
   let playButton = document.querySelector("nav a#song-link");
-    console.log(addedButton);
     if(addedTitle){
       addedTitle.parentNode.removeChild(addedTitle);
       addedButton.parentNode.removeChild(addedButton);
@@ -78,7 +77,6 @@ const fetchAnswers = () => {
   axios.get(api_root)
       .then(response => {
           const answers = response.data.text;
-          console.log(`GET list answers`, answers);
       })
       .catch(error => console.error(error));
 };

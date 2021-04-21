@@ -6,9 +6,8 @@ router.get('/', async (req, res) => {
   try {
     // const answers = await Submission.getAnswers(req.params.qId);
     const answers = {
-      text: "hello! i love you"
+      text: "Welcome To The Empathy Project!"
     }
-    console.log(answers);
     res.send(answers);
   } catch (error) {
     res.status(401).send({ message: error.message });

@@ -22,7 +22,6 @@ const Submission = mongoose.model("Submission", submissionSchema);
 // get all answers from specific question:
 async function getQuestions() {
   const questions = await Submission.find();
-  // console.log(questions);
   return questions;
 }
 

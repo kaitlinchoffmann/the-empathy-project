@@ -3,6 +3,14 @@
   src: url("Margo_Condensed_v0.1-Medium.woff") format('woff');
 }
 
+@font-face {
+  font-family: "Millik";
+  src: url("Millik.woff"),
+  url("Millik.woff2"),
+  url("Millik.otf")
+   format('woff');
+}
+
 * {
   box-sizing: border-box;
 }
@@ -775,14 +783,14 @@ nav h1 {
 
 /* what do you hope for? */
 #hope-body .forms #just-answers input[type=submit] {
-  font-family: 'Changa One', cursive;
+  font-family: 'Millik', 'Changa One', cursive;
   font-weight: 400;
   font-style: regular;
   font-size: 1em;
 }
 
 #hope-body h1 {
-  font-family: 'Changa One', cursive;
+  font-family: 'Millik', 'Changa One', cursive;
   font-weight: 400;
   font-style: regular;
   font-size: 2em;

@@ -134,7 +134,7 @@ const appendToDOM = (answers, question) => {
 
   nav.append(
     '<h1 style="z-index:1;">' + h1 + '</h1>' +
-    '<button id="' + quest +'" class="getQuestion" onclick="getForm(\'' + questForm + '\')">Another Question</button>'
+    '<button style="font-family: \'Karla\', sans-serif;" id="' + quest +'" class="getQuestion" onclick="getForm(\'' + questForm + '\')">Another Question</button>'
   );
 
   // header.toggle('.sticky');

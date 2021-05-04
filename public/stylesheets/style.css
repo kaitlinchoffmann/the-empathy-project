@@ -225,6 +225,12 @@ button:hover {
   margin-top: 25px;
 }
 
+#care-body .forms #just-answers input[type=submit] {
+  font-family: termina, sans-serif;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
 #form-blob {
   opacity: 80%;
   margin: 0;
@@ -765,6 +771,7 @@ nav h1 {
 }
 
 #miss-body h1 {
+  font-family: 'Averia Serif Libre', cursive;
   font-size: 2em;
   width: 100%;
   font-weight: 300;

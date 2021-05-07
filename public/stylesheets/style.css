@@ -477,6 +477,11 @@ path {
   margin-top: 0;
 }
 
+#about-colophon p, #about-colophon ul {
+  font-size: 0.7em;
+  color: #DDD8CE
+}
+
 #about-body footer {
   margin: 100px 3em;
   padding-bottom: 10px;

@@ -478,9 +478,8 @@ path {
   margin-top: 0;
 }
 
-#about-colophon p, #about-colophon ul {
-  font-size: 1.2em;
-  color: #DDD8CE
+#about-colophon .link-p a {
+  text-decoration: underline;
 }
 
 #about-body footer {

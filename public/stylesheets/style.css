@@ -339,6 +339,12 @@ button:hover {
   padding: 18px 45px;
 }
 
+.cards-mockup {
+	max-width: 75%;
+	height: auto;
+	padding-bottom: 10px;
+}
+
 #info-body .tip-heading {
   margin-bottom: 0;
   margin-top: 30px;

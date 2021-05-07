@@ -360,6 +360,7 @@ button:hover {
   margin: 110px 3em;
   padding-bottom: 10px;
   color: #DDD8CE;
+  text-align: center;
 }
 
 #info-body ul li {
